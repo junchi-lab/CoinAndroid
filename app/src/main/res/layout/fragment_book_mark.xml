@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_bookmark"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:title="@string/bookmark"
+            app:titleTextAppearance="@style/TextHeadline5.Black.Bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/vp_bookmark"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar_bookmark" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/vp_bookmark_indicator"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vp_bookmark"
+            app:tabBackground="@drawable/selector_viewpager_indicator"
+            app:tabGravity="center"
+            app:tabIndicatorHeight="0dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

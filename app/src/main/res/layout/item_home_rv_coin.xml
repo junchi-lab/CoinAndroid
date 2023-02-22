@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="clickListener"
+            type="com.junchi.coinandroid.ui.common.DetailClickListener" />
+
+        <variable
+            name="viewModel"
+            type="com.junchi.coinandroid.ui.home.HomeViewModel" />
+
+        <variable
+            name="coin"
+            type="com.junchi.coinandroid.model.Coin" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="@{()-> clickListener.onDetailClick(coin.name)}"
+        app:cardCornerRadius="12dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/tv_home_coin_name"
+                style="@style/TextHeadline4.Black.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{coin.name}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="BTC" />
+
+            <TextView
+                android:id="@+id/tv_home_coin_rate"
+                style="@style/TextHeadline5.Black.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                fluctuations="@{coin.info.fluctateRate24H}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="쌍승"/>
+
+            <TextView
+                style="@style/TextSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="@string/units_traded_24H"/>
+
+            <TextView
+                android:id="@+id/tv_home_units_traded_24H"
+                style="@style/TextSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="@{coin.info.unitsTraded24H}"/>
+
+            <TextView
+                style="@style/TextSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/tv_home_units_traded_24H"
+                android:layout_marginBottom="10dp"
+                android:text="@string/fluctate_24H"/>
+
+            <TextView
+                android:id="@+id/tv_home_fluctate_24H"
+                style="@style/TextSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintBottom_toTopOf="@id/tv_home_units_traded_24H"
+                android:text="@{coin.info.fluctate24H}"/>
+
+            <TextView
+                style="@style/TextSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/tv_home_fluctate_24H"
+                android:text="@string/fluctate_rate_24H"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:id="@+id/tv_home_fluctate_rate_24H"
+                style="@style/TextSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/tv_home_fluctate_24H"
+                android:text="@{coin.info.fluctateRate24H}"
+                android:layout_marginBottom="10dp"/>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

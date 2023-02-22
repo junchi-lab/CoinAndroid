@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">CoinAndroid</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="status">상태</string>
+    <string name="home">홈</string>
+    <string name="bookmark">즐겨찾기</string>
+    <string name="description_coin_status">코인 거래 가능 표시</string>
+    <string name="opening_price">시가</string>
+    <string name="closing_price">종가</string>
+    <string name="min_price">저가</string>
+    <string name="max_price">고가</string>
+    <string name="units_traded">거래량</string>
+    <string name="acc_trade_value">거래금액</string>
+    <string name="prev_closing_price">전일종가</string>
+    <string name="units_traded_24H">최근거래량</string>
+    <string name="fluctate_24H">최근변동가</string>
+    <string name="fluctate_rate_24H">최근변동률</string>
+    <string name="time_stamp">시간</string>
+    <string name="transaction_date">거래체결시간</string>
+    <string name="transaction_type">거래유형</string>
+    <string name="transaction_price">거래가</string>
+    <string name="total_price">총거래금액</string>
+    <string name="detail_title">상세정보</string>
+    <string name="description_home_vp_background">추천코인배경</string>
+    <string name="coin_recommend">추천</string>
+    <string name="add_coin_bookmark">즐겨찾기등록</string>
+    <string name="caution">투자의 책임은 투자자\n본인에게 있습니다.</string>
+    <string name="delete">즐겨찾기 해제</string>
+    <string name="delete_bookmark">"즐겨찾기에서 해제 하시겠습니까?"</string>
+
+    <!--  Unit  -->
+    <string name="unit_discount_rate">%d%%</string>
+    <string name="unit_discount_currency">%s원</string>
+    <string name="raise">상승</string>
+    <string name="decline">하락</string>
+    <string name="add_bookmark">즐겨찾기에 추가하였습니다.</string>
+
+</resources>

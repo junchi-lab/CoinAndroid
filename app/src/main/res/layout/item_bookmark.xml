@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="delete"
+            type="com.junchi.coinandroid.ui.common.DeleteClickListener" />
+
+        <variable
+            name="clickListener"
+            type="com.junchi.coinandroid.ui.common.DetailClickListener" />
+
+        <variable
+            name="data"
+            type="com.junchi.coinandroid.database.entity.BookmarkEntity" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/view_bookmark"
+            android:layout_width="312dp"
+            android:layout_height="500dp"
+            android:background="@drawable/background_black_gradient"
+            android:onClick="@{() -> clickListener.onDetailClick(data.coinId)}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_home_bookmark_coin"
+            style="@style/TextHeadline64.White.Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="24dp"
+            android:maxLines="2"
+            android:text="@{data.coinId}"
+            app:layout_constraintBottom_toTopOf="@id/bg_coin_content"
+            app:layout_constraintEnd_toEndOf="@id/view_bookmark"
+            app:layout_constraintStart_toStartOf="@id/view_bookmark"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="BTC" />
+
+        <View
+            android:id="@+id/bg_coin_content"
+            android:layout_width="0dp"
+            android:layout_height="85dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/background_white"
+            app:layout_constraintBottom_toBottomOf="@id/view_bookmark"
+            app:layout_constraintEnd_toEndOf="@id/view_bookmark"
+            app:layout_constraintStart_toStartOf="@id/view_bookmark" />
+
+        <TextView
+            style="@style/TextMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:onClick="@{()->delete.onDeleteClick(data)}"
+            android:text="@string/delete"
+            app:layout_constraintBottom_toBottomOf="@id/bg_coin_content"
+            app:layout_constraintEnd_toEndOf="@id/bg_coin_content"
+            app:layout_constraintStart_toStartOf="@id/bg_coin_content"
+            app:layout_constraintTop_toTopOf="@id/bg_coin_content" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

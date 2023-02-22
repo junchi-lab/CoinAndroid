@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="RoundedBig">
+        <item name="cornerSize">12dp</item>
+    </style>
+
+    <style name="TextHeadline4.Black" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TextHeadline4.Black.Bold" >
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextHeadline5.Black" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TextHeadline5.Black.Bold" >
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextSubtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TextSubtitle1.Bold" >
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextSubtitle1.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="TextSubtitle1.White.Bold">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="TextMedium" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TextMedium.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextMedium.Bold.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="TextMedium.Blue">
+        <item name="android:textColor">@color/purple_700</item>
+    </style>
+
+    <style name="TextMedium.Blue.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextMedium.Purple">
+        <item name="android:textColor">@color/purple_500</item>
+    </style>
+
+    <style name="TextMedium.Purple.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextSmall" parent="TextAppearance.AppCompat.Small">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TextCaption1" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TextCaption1.White" >
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="TextHeadline32" >
+        <item name="android:textSize">32sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TextHeadline32.White" >
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="TextHeadline32.White.Bold" >
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextHeadline64" >
+        <item name="android:textSize">64sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TextHeadline64.White" >
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="TextHeadline64.White.Bold" >
+        <item name="android:textStyle">bold</item>
+    </style>
+
+</resources>

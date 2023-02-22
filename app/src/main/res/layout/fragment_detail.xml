@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.junchi.coinandroid.ui.detail.DetailViewModel" />
+
+        <variable
+            name="data"
+            type="String" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/tb_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:contentInsetStartWithNavigation="0dp"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:navigationIcon="@drawable/ic_gnb_back"
+                app:titleTextAppearance="@style/TextMedium.Bold"
+                app:titleTextColor="@color/black"
+                app:title="@string/detail_title" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_detail_coin_name"
+                    style="@style/TextHeadline4.Black.Bold"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginStart="50dp"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    android:text="@{data}"
+                    tools:text="btc"/>
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    style="@style/TextSubtitle1.White.Bold"
+                    android:layout_width="156dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="@drawable/background_gradient_r24"
+                    android:onClick="@{() -> viewModel.addBookmark(data)}"
+                    android:text="@string/add_coin_bookmark"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tv_detail_coin_name"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_detail_coin_name"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_detail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_detail_coin_name"
+                    tools:listitem="@layout/item_detail_history" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>
